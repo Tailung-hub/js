@@ -4,50 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson_3</title>
+    <title>Lesson 3.1</title>
 </head>
 
 <body>
-    <!-- <script>
-        // 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
-        const x = 100;
-        nextNumber:
-        for (let i = 2; i <= 100; i++) {
-            for (let j = 2; j < i; j++) {
-                if (i % j == 0) continue nextNumber;
+    <script>
+        var bascet = [
+            {
+                name: 'Процессор',
+                price: 2000,
+                quanity: 3
+            },
+            {
+                name: 'Мат. плата',
+                price: 3000,
+                quanity: 4
+            },
+            {
+                name: 'ОЗУ',
+                price: 500,
+                quanity: 5
+            },
+            {
+                name: 'HDD',
+                price: 700,
+                quanity: 4
             }
-            console.log(i);
-        }
-    </script> -->
-    <!-- <script>
-        //2. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. Товары в корзине хранятся в массиве. /.//Задачи:
-        //a) Организовать такой массив для хранения товаров в корзине;
-        //b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
-        var bascet = [['Процессор', 2000, 3], ['Мат. плата', 3000, 4], ['ОЗУ', 500, 5], ['HDD', 700, 4]];
+        ]
         function countBasketPrice(bascet) {
-            // var initialValue = bascet[0][1] * bascet[0][2];
-            var initialValue = 0;
-            var sum = bascet.reduce(function (accumulator, currentValue) {
-                return accumulator + bascet[1] * bascet[2];
-            }, initialValue);
-            return sum;
+            return bascet.reduce((totalPrice, cartItem) => totalPrice + cartItem.price * cartItem.quanity, 0);
         }
         console.log(countBasketPrice(bascet));
-    </script> -->
-    <!-- <script>
-        //3.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла.
-        // Выглядеть это должно так: for(…){// здесь пусто}
-        var i = 0;
-        for (; i < 10; console.log(i++)) { };
-    </script> -->
-    <!-- <script>
-        //4. *Нарисовать пирамиду с помощью console.log. У пирамиды должно быть 20 рядов. 
-        var x = '';
-        for (let i = 1; i <= 20; i++) {
-            x += '*'
-            console.log(x);
-        }
-    </script> -->
+    </script>
 </body>
 
 </html>
