@@ -1,2 +1,1 @@
 # js
-Основы языка JavaScript
