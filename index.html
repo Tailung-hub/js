@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3.1</title>
+</head>
+
+<body>
+    <script>
+        var bascet = [
+            {
+                name: 'Процессор',
+                price: 2000,
+                quanity: 3
+            },
+            {
+                name: 'Мат. плата',
+                price: 3000,
+                quanity: 4
+            },
+            {
+                name: 'ОЗУ',
+                price: 500,
+                quanity: 5
+            },
+            {
+                name: 'HDD',
+                price: 700,
+                quanity: 4
+            }
+        ]
+        function countBasketPrice(bascet) {
+            return bascet.reduce((totalPrice, cartItem) => totalPrice + cartItem.price * cartItem.quanity, 0);
+        }
+        console.log(countBasketPrice(bascet));
+    </script>
+</body>
+
+</html>
